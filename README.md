@@ -20,7 +20,7 @@ Options:
   -h, --help boolean                Shows a list of available options
 ```
 
-As an example, if you wanted to check if Google is online, you would do:
+As an example, if you wanted to check if Google is online or if your ISP is being a piece of trash again, you would do:
 ```
 $ ./checkhost -m http https://www.google.com
 ✔ Successfully requested a HTTP check!
