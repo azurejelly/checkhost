@@ -14,7 +14,7 @@ import (
 
 var (
 	mode         = flag.String("mode", "http", "Type of check to request (http, tcp, udp, dns)")
-	maxNodes     = flag.Int("max-nodes", 100, "Amount of nodes to check from")
+	maxNodes     = flag.Int("max-nodes", 100, "Maximum amount of nodes to check from")
 	nodeList     = flag.String("nodes", "", "Comma-separated list of nodes to use")
 	fullNodeList = flag.Bool("display-all-nodes", false, "Whether to display more than 5 nodes on the final output")
 	help         = flag.Bool("help", false, "Shows a list of available options")
@@ -23,7 +23,7 @@ var (
 
 func init() {
 	flag.StringVar(mode, "m", "http", "Type of check to request (http, tcp, udp, dns)")
-	flag.IntVar(maxNodes, "M", 100, "Amount of nodes to check from")
+	flag.IntVar(maxNodes, "M", 100, "Maximum amount of nodes to check from")
 	flag.StringVar(nodeList, "n", "", "Comma-separated list of nodes to use")
 	flag.BoolVar(yes, "y", false, "Whether to automatically open the report in your web browser")
 	flag.BoolVar(fullNodeList, "a", false, "Whether to display more than 5 nodes on the final output")
@@ -35,7 +35,7 @@ func init() {
 		fmt.Println("Options:")
 		fmt.Println("  -m, --mode string                 Type of check to request (http,")
 		fmt.Println("                                    tcp, udp, dns)")
-		fmt.Println("  -M, --max-nodes int               Amount of nodes to check from")
+		fmt.Println("  -M, --max-nodes int               Maximum amount of nodes to check from")
 		fmt.Println("  -n, --nodes string                Comma-separated list of nodes to use")
 		fmt.Println("  -a, --display-all-nodes boolean   Whether to display more than 5 nodes")
 		fmt.Println("                                    on the final output")
